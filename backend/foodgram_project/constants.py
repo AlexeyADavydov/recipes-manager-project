@@ -1,0 +1,21 @@
+INGR_NAME: str = 200
+
+INGR_MEASUREMENT: int = 200
+
+TAG_NAME: str = 200
+
+TAG_COLOR: str = 7
+
+TAG_SLUG: str = 200
+
+RECIPE_NAME: str = 200
+
+USER_EMAIL: str = 254
+
+USER_USERNAME: str = 150
+
+USER_FIRST_NAME: str = 150
+
+USER_LAST_NANE: str = 150
+
+USER_PASSWORD: str = 150
