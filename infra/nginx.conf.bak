@@ -1,17 +1,16 @@
 server {
     listen 80;
     server_name 89.111.174.253;
-    # server_name 127.0.0.1;
+
+
+    client_max_body_size 20M;  
 
     location /media/ {
       root /var/html;
-#      alias /media/;
     }
 
     location /static/admin/ {
       root /var/html;
-#      root /staticfiles/;
-#      proxy_pass http://backend:8000/static/admin/;
     }
 
     location /static/rest_framework/ {
@@ -37,12 +36,12 @@ server {
     location / {
         root /usr/share/nginx/html;
         index  index.html index.htm;
-      #  try_files $uri /index.html /usr/share/nginx/html/index.html;
-      #  try_files $uri /index.html;
-        try_files $uri $uri/ /index.html;
+        # try_files $uri /index.html;
+        try_files $uri $uri/ index.html;
+        # try_files $uri /index.html /usr/share/nginx/html/index.html;       
         proxy_set_header        Host $host;
         proxy_set_header        X-Real-IP $remote_addr;
-        proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;  
         proxy_set_header        X-Forwarded-Proto $scheme;
       }
 
@@ -53,3 +52,5 @@ server {
       }
 
 }
+
+

@@ -10,8 +10,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'alexeyadavydov.com',
-    '84.201.154.124',
+    'recipes.alexeyadavydov.com',
+    '89.111.174.253',
 ]
 
 
